@@ -1,3 +1,3 @@
-/**
- * Created by 智享单车 on 2017/8/24.
- */
+import {createStore} from 'redux';
+import reducers from  './reducers'
+export default createStore(reducers)

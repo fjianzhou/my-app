@@ -16,8 +16,10 @@ export default class HomeHeader extends Component{
         })
     }
     //选择课程
-    selectedLesson = () => {
+    selectedLesson = (e) => {
 
+        this.props.selectedLesson(e.target.getAttribute("type"));
+        this.switchBtn();
     }
 
     render(){
@@ -31,11 +33,11 @@ export default class HomeHeader extends Component{
                     </div>
                 </div>
                 {this.state.isShow?
-                    <ul className="lessonList">
-                        <li>课程2</li>
-                        <li>课程2</li>
-                        <li>课程3</li>
-                        <li>课程4</li>
+                    <ul className="lessonList" onClick={this.selectedLesson}>
+                        <li type="1">课程2</li>
+                        <li type="2">课程2</li>
+                        <li type="3">课程3</li>
+                        <li type="4">课程4</li>
                     </ul>
                     :
                     null

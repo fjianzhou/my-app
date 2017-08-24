@@ -7,6 +7,7 @@ module.exports={
         filename:'bundle.js',
         path:path.resolve('dist')
     },
+    devtool : 'source-map',
     module:{
         rules:[
             {test:/\.js$/,use:'babel-loader',exclude:/node_modules/},

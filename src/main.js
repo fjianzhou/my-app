@@ -4,11 +4,14 @@ import {HashRouter as Router,Route,Switch} from 'react-router-dom';
 import Home from './containers/Home';
 import Lesson from './containers/Lesson';
 import Profile from './containers/Profile';
-import './common/index.less'
-import App from './containers/app'
+import './common/index.less';
+import App from './containers/app';
+import {Provider} from 'react-redux';
+import store from './redux/store';
+window._store=store;
 
 render(
-    <div>
+    <Provider store={store}>
         <Router>
             <App>
                 <Switch>
@@ -18,7 +21,7 @@ render(
                 </Switch>
             </App>
         </Router>
-    </div>
+    </Provider>
     ,
     document.getElementById('app')
 )
