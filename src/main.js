@@ -8,6 +8,8 @@ import './common/index.less';
 import App from './containers/app';
 import {Provider} from 'react-redux';
 import store from './redux/store';
+import Login from './containers/login';
+import 'bootstrap/dist/css/bootstrap.css'
 window._store=store;
 
 render(
@@ -18,6 +20,8 @@ render(
                     <Route path='/' exact component={Home}/>
                     <Route path='/lesson'   component={Lesson}/>
                     <Route path='/profile'  component={Profile}/>
+                    <Route path='/login' exact component={Login}/>
+
                 </Switch>
             </App>
         </Router>
