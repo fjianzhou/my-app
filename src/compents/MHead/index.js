@@ -1,9 +1,14 @@
 import React,{Component} from 'react';
 import {render} from 'react-dom';
+import {withRouter} from 'react-router-dom';
 import './index.less'
-export default class MHead extends Component{
+
+class MHead extends Component{
     constructor(){
         super();
+    }
+    back= () =>{
+       this.props.history.goBack();
     }
     render(){
         return(
@@ -15,3 +20,4 @@ export default class MHead extends Component{
     }
 }
 
+export default withRouter(MHead);
