@@ -12,6 +12,7 @@ import Login from './containers/login';
 import 'bootstrap/dist/css/bootstrap.css'
 import {ConnectedRouter} from 'react-router-redux';
 import createHashHistory from 'history/createHashHistory';
+import PrivateRoute from './PrivateRoute';
 let history=createHashHistory();
 import Register from './containers/Register'
 window._store=store;
@@ -22,7 +23,7 @@ render(
             <App>
                 <Switch>
                     <Route path='/' exact component={Home}/>
-                    <Route path='/lesson'   component={Lesson}/>
+                    <PrivateRoute path='/lesson'   component={Lesson}/>
                     <Route path='/profile'  component={Profile}/>
                     <Route path='/login' exact component={Login}/>
                     <Route path='/reg' exact component={Register}/>

@@ -9,3 +9,8 @@ export function regs(data){
 export function logins(data){
     return post(`${baseUrl}/login`,data)
 }
+
+export function auth(){
+    console.log('auth')
+    return get(`${baseUrl}/auth`)
+}

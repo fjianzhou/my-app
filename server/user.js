@@ -1,6 +1,6 @@
 let mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/my-app');
+mongoose.connect('mongodb://localhost:27017/my-app',{  useMongoClient: true,});
 
 
 let schema=mongoose.Schema,objectId=schema.ObjectId;

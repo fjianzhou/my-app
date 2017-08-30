@@ -10,14 +10,16 @@ class Profile extends Component{
 
     constructor(){
         super();
-        this.state={
-            name:'xxx',
-            pwd:'',
-        }
+    }
+    componentWillMount(){
 
     }
+    componentDidMount(){
+        console.log(2)
+        this.props.auths();
+    }
     render(){
-        console.log(this.props);
+        console.log(3)
         return(
             <div className="profile">
                 <div className="profile_box" >

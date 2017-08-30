@@ -1,6 +1,7 @@
 export default {
     get: function (key) {
-        let val= sessionStorage.getItem(key);
+        let val= sessionStorage.getItem(key) || '';
+
         if(val.startsWith('{') || val.startsWith('[') ){
             val=JSON.parse(val);
         }
@@ -11,7 +12,7 @@ export default {
             sessionStorage.setItem(key, JSON.stringify(val))
         }
         else {
-            sessionStorage.setItem(key, JSON.stringify(val))
+            sessionStorage.setItem(key, val)
         }
     }
 }

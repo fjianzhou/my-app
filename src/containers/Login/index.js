@@ -14,6 +14,9 @@ class Login extends Component{
             pwd:'',
         }
     }
+    componentDidMount(){
+        this.props.auths();
+    }
 
     loginAction= () => {
         console.log(this)
